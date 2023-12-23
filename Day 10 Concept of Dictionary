@@ -1,0 +1,572 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "3a7ccbcb",
+   "metadata": {},
+   "source": [
+    "# Day 10"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "52547d26",
+   "metadata": {},
+   "source": [
+    "# Concept of Dictionary in Python"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "196e8d37",
+   "metadata": {},
+   "source": [
+    "# Creating a Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "bfb63085",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'ID': '123ab', 'Color': 'Black', 'Year': 1964}\n",
+      "<class 'dict'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {\"ID\": \"123ab\", \"Color\" : \"Black\" , \"Year\" :1964}\n",
+    "print(a)\n",
+    "print(type(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "bae2663a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Black\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(a[\"Color\"])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6f758b39",
+   "metadata": {},
+   "source": [
+    "# No Duplicates"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "fdaee0cd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'ID': '123ab', 'Color': 'Black', 'Year': 2000}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {\"ID\": \"123ab\", \"Color\" : \"Black\" , \"Year\" :1964 , \"Year\" :2000}\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b0e2d30b",
+   "metadata": {},
+   "source": [
+    "# Length"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f21e08f0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(len(a))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "510ac26c",
+   "metadata": {},
+   "source": [
+    "# Nesting"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "13440e13",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'dict'>\n",
+      "{'ID': '123ab', 'Color': 'Black', 'Year': 1964, 'a': [1, 2, 3, 4, 5], 'b': (2.2, 3.3, 4.4, 5.2), 'C': False}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = {\"ID\": \"123ab\", \"Color\" : \"Black\" , \"Year\" :1964, \"a\" : [1,2,3,4,5] , \"b\" : (2.2,3.3,4.4,5.2) , \"C\" : False}\n",
+    "print(dict)\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "14a37bc7",
+   "metadata": {},
+   "source": [
+    "# Getting Values & Keys"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "fbc63655",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Swati\n",
+      "Swati\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = { \"Name\" :\"Swati\" , \"Age\" : 27 , \"Country\" : \"India\"}\n",
+    "print(a[\"Name\"])\n",
+    "print(a.get(\"Name\"))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "03c99e45",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict_keys(['Name', 'Age', 'Country'])\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = a.keys()\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "e9b348f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict_values(['Swati', 27, 'India'])\n"
+     ]
+    }
+   ],
+   "source": [
+    "y = a.values()\n",
+    "print(y)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "730141ca",
+   "metadata": {},
+   "source": [
+    "# Replacing Values"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "52cf7c7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Name': 'Swati', 'Age': 28, 'Country': 'India'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = { \"Name\" :\"Swati\" , \"Age\" : 27 , \"Country\" : \"India\"}\n",
+    "a[ \"Age\"] = 28\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "93f2bf96",
+   "metadata": {},
+   "source": [
+    "# Update of Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "4f110679",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Name': 'Swati', 'Age': 27, 'Country': 'India', 'Mail ID': 'swati@gmail.com'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = { \"Name\" :\"Swati\" , \"Age\" : 27 , \"Country\" : \"India\"}\n",
+    "a.update ( { \"Mail ID\" : \"swati@gmail.com\"})\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7b80846b",
+   "metadata": {},
+   "source": [
+    "# Use of Pop , Delete and Clear"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "d975cf5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Name': 'Swati', 'Country': 'India'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = { \"Name\" :\"Swati\" , \"Age\" : 27 , \"Country\" : \"India\"}\n",
+    "a.pop(\"Age\")\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "bdeffce8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Name': 'Swati', 'Country': 'India', 'Gender': 'Female'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = { \"Name\" :\"Swati\" , \"Age\" : 27 , \"Country\" : \"India\" , \"Gender\": \"Female\"}\n",
+    "del a [\"Age\"]\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "470669d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{}\n",
+      "<class 'dict'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "a.clear()\n",
+    "print(a)\n",
+    "print(type(a))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3abb6acf",
+   "metadata": {},
+   "source": [
+    "# Concatinate"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "1c4eb9aa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict1 = { 1:10 , 2:20}\n",
+    "dict2 = { 3:30 , 4:40}\n",
+    "dict3 = { 5:50 , 6:60}\n",
+    "dict4 = {}\n",
+    "for d in ( dict1,dict2,dict3):dict4.update (d)\n",
+    "print(dict4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5cda7434",
+   "metadata": {},
+   "source": [
+    "# Creating dictionary of square quantities"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "62c9bf12",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{0: 0}\n",
+      "{0: 0, 1: 1}\n",
+      "{0: 0, 1: 1, 2: 4}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196}\n",
+      "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d = dict()\n",
+    "for x in range(16):\n",
+    "    d[x] = x**2\n",
+    "    print(d)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8d0ddfa0",
+   "metadata": {},
+   "source": [
+    "# Check whether a given key already exists in a dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "f5192eb5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Key exists in the dictionary.\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = { \"Name\" :\"Swati\" , \"Age\" : 27 , \"Country\" : \"India\" , \"Gender\": \"Female\"}\n",
+    "\n",
+    "if a. get('Age') is not None:\n",
+    "        print(\"Key exists in the dictionary.\")\n",
+    "else:\n",
+    "        print(\"Key does not exist in the dictionary.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "95d2b582",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Key exists in dictionary a\n"
+     ]
+    }
+   ],
+   "source": [
+    "if \"Age\" in a :\n",
+    "    print( \"Key exists in dictionary a\")\n",
+    "else:\n",
+    "    print(\"Key does not exist in dictionary a\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "03d90d99",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Key exists in the dictionary.\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "\n",
+    "try:\n",
+    "    value = a['Age']\n",
+    "    print(\"Key exists in the dictionary.\")\n",
+    "except KeyError:\n",
+    "    print(\"Key does not exist in the dictionary.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "61b91c81",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "27"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.setdefault(\"Age\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3ca9efc4",
+   "metadata": {},
+   "source": [
+    "# Sorting keys & Values"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "03303db6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60, 8: 80, 9: 90}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d ={1:10,9:90,4:40,2:20 ,5:50,3:30,8:80,6:60}\n",
+    "sorted_dict = dict(sorted(d.items()))\n",
+    "print(sorted_dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ba8dd731",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
